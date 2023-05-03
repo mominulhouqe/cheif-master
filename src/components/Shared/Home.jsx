@@ -1,11 +1,11 @@
 import React from 'react';
-import Chiefs from '../ChiefStaap/Chiefs';
-
+import ChefUser from '../ChiefStaap/ChefUser';
 
 const Home = () => {
     return (
      <div>
-        <Chiefs></Chiefs>
+        
+      
   
      </div>
     );

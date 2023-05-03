@@ -12,9 +12,9 @@ const Header = () => {
   return (
     <>
       <div>
-        <Navbar bg="" expand="lg">
-          <Container>
-            <Navbar.Brand href="#home" className="text-white fw-bold">
+        <Navbar bg="light" expand="lg">
+          <Container className='p-3'>
+            <Navbar.Brand href="#home" className="fw-bold">
               Qichen
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -22,37 +22,37 @@ const Header = () => {
               <Nav className="me-auto">
                 <Link
                   to="/"
-                  className="text-white text-decoration-none mx-4"
+                  className=" text-decoration-none mx-4"
                 >
                   Home
                 </Link>
                 <Link
-                  to="/"
-                  className="text-white text-decoration-none mx-4"
+                  to="/blog"
+                  className=" text-decoration-none mx-4"
                 >
                   Blog
                 </Link>
                 <Link
                   to="/pages"
-                  className="text-white text-decoration-none mx-4"
+                  className=" text-decoration-none mx-4"
                 >
                   Pages
                 </Link>
                 <Link
-                  to="/"
-                  className="text-white text-decoration-none mx-4"
+                  to="/profile"
+                  className=" text-decoration-none mx-4"
                 >
                   <BsFillPersonFill></BsFillPersonFill>
                 </Link>
                 <Link
-                  to="/"
-                  className="text-white text-decoration-none mx-4"
+                  to="/login"
+                  className=" text-decoration-none mx-4"
                 >
                   Login 
                 </Link>
                 <Link
-                  to="/"
-                  className="text-white text-decoration-none mx-4"
+                  to="/register"
+                  className=" text-decoration-none mx-4"
                 >
                   Register
                 </Link>
