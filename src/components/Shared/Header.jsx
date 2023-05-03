@@ -33,6 +33,12 @@ const Header = () => {
                   Blog
                 </Link>
                 <Link
+                  to="/pages"
+                  className="text-white text-decoration-none mx-4"
+                >
+                  Pages
+                </Link>
+                <Link
                   to="/"
                   className="text-white text-decoration-none mx-4"
                 >
