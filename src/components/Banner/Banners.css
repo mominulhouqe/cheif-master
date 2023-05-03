@@ -1,0 +1,9 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:wght@100&display=swap');
+
+.banner{
+    background: linear-gradient(to right, #6B5B95, #F15F79);
+    font-family: 'Bree Serif', serif;
+    font-family: 'Roboto', sans-serif;
+}
+   
