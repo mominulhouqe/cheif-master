@@ -8,7 +8,7 @@ const Chiefs = () => {
   const [user, setUser] = useState([]);
 
   useEffect(()=>{
-    fetch('https://chef-master-server-mominulhouqe.vercel.app/datas')
+    fetch('http://localhost:4000/datas')
     .then(res => res.json())
     .then(data => setUser(data))
   },[])
@@ -16,7 +16,13 @@ const Chiefs = () => {
 
   return (
     <div>
-       <ChefUser user ={user} ></ChefUser>
+       {
+        user.map(data => <ChefUser
+        key={data.id}
+        data = {data}
+
+          ></ChefUser> )
+       }
     </div>
   );
 };

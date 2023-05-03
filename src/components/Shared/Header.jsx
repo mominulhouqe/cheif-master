@@ -1,68 +1,31 @@
-import { Link } from 'react-router-dom';
-import { FaAccusoft } from "react-icons/fa";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Banner from '../Banner/Banner';
-import { BsFillPersonFill , BsFillArrowDownRightSquareFill} from 'react-icons/bs';
-
+import React, { useState } from 'react';
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  }
   return (
-    <>
-      <div>
-        <Navbar bg="light" expand="lg">
-          <Container className='p-3'>
-            <Navbar.Brand href="#home" className="fw-bold">
-              Qichen
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Link
-                  to="/"
-                  className=" text-decoration-none mx-4"
-                >
-                  Home
-                </Link>
-                <Link
-                  to="/blog"
-                  className=" text-decoration-none mx-4"
-                >
-                  Blog
-                </Link>
-                <Link
-                  to="/pages"
-                  className=" text-decoration-none mx-4"
-                >
-                  Pages
-                </Link>
-                <Link
-                  to="/profile"
-                  className=" text-decoration-none mx-4"
-                >
-                  <BsFillPersonFill></BsFillPersonFill>
-                </Link>
-                <Link
-                  to="/login"
-                  className=" text-decoration-none mx-4"
-                >
-                  Login 
-                </Link>
-                <Link
-                  to="/register"
-                  className=" text-decoration-none mx-4"
-                >
-                  Register
-                </Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-        <Banner></Banner>
+    <nav className="navbar bg-primary">
+    <div className="navbar-container">
+      <a href="#" className="navbar-brand text-2xl font-bold text-white">My App</a>
+      <button className="navbar-toggler ml-auto text-white lg:hidden" onClick={toggleMenu}>
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <div className={`navbar-menu ${isOpen ? '' : 'hidden'} lg:flex lg:items-center`} id="navbar-menu">
+        <a href="#" className="navbar-link text-white hover:text-secondary mx-5">Home</a>
+        <a href="#" className="navbar-link text-white hover:text-secondary mx-5">About</a>
+        <a href="#" className="navbar-link text-white hover:text-secondary mx-5">Contact</a>
       </div>
-    </>
+    </div>
+  </nav>
+  
+  
   );
 };
 
