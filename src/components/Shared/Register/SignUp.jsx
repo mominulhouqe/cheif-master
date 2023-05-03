@@ -3,34 +3,61 @@ import React from 'react';
 const SignUp = () => {
     return (
         <div>
-            <div class="w-full max-w-md mx-auto">
-                <form class="bg-white rounded-lg px-8 pt-6 pb-8 mb-4">
-                    <div class="mb-4">
-                        <label class="block text-gray-700 font-bold mb-2" for="name">
+            <div className="w-full max-w-md mx-auto mt-10 mb-10">
+                <form className="bg-white rounded-lg px-8 pt-6 pb-8 mb-4">
+                    <div className="mb-4">
+                        <label className="block text-gray-700 font-bold mb-2">
                             Name
                         </label>
-                        <input class="daisy-input w-full" id="name" type="text" placeholder="Enter your name" />
+
+                        <input
+                            className="form-input rounded-lg w-full py-2  px-4 leading-tight border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                            id="name"
+                            type="name"
+                            placeholder="Enter your Name "
+                        />
+
                     </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700 font-bold mb-2" for="email">
-                            Email Address
+                    <div className="mb-4">
+                        <label className="block text-gray-700 font-bold mb-2">
+                            Photo URL
                         </label>
-                        <input class="daisy-input w-full" id="email" type="email" placeholder="Enter your email" />
+
+                        <input
+                            className="form-input rounded-lg w-full py-2  px-4 leading-tight border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                            id="photo"
+                            type="photo"
+                            placeholder="Enter your Photo URL"
+                        />
+
                     </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700 font-bold mb-2" for="password">
+                    <div className="mb-6">
+                        <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
+                            Email address
+                        </label>
+                        <input
+                            className="form-input rounded-lg w-full py-2  px-4 leading-tight border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                            id="email"
+                            type="email"
+                            placeholder="Enter your email address"
+                        />
+                    </div>
+
+                    <div className="mb-6">
+                        <label className="block text-gray-700 font-bold mb-2" htmlFor="password">
                             Password
                         </label>
-                        <input class="daisy-input w-full" id="password" type="password" placeholder="************" />
+                        <input
+                            className="form-input rounded-lg w-full py-2 px-4 leading-tight border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                            id="password"
+                            type="password"
+                            placeholder="Enter your password"
+                        />
                     </div>
-                    <div class="mb-6">
-                        <label class="block text-gray-700 font-bold mb-2" for="confirm-password">
-                            Confirm Password
-                        </label>
-                        <input class="daisy-input w-full" id="confirm-password" type="password" placeholder="************" />
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <button class="daisy-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+
+                   
+                    <div className="flex items-center justify-between">
+                        <button className="daisy-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                             Register
                         </button>
                     </div>
