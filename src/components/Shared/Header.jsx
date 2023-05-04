@@ -13,7 +13,7 @@ const Header = () => {
     <nav className="sticky font-mono bg-primary">
       <div className="navbar-container flex justify-between items-center mx-auto max-w-6xl px-4 py-3">
         <a href="#" className="navbar-brand text-2xl font-bold text-white flex-grow">
-          My App
+        The Hungry Fork
         </a>
         <button className="navbar-toggler ml-auto my-3 me-5 text-white lg:hidden" onClick={toggleMenu}>
           {isOpen ? (
