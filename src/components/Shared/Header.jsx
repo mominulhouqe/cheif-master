@@ -72,7 +72,7 @@ const Header = () => {
 
           {user &&
             <div className="flex items-center">
-              {user.photoURL && <img src={user.photoURL} alt="user profile" className="w-8 h-8 rounded-full mr-2" />}
+              {user?.photoURL && <img  src={user?.photoURL} alt="user profile" className="w-8 h-8 rounded-full mr-2" />}
               <div className="relative">
                 <button className="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg" aria-label="User profile">
                   {user.displayName}

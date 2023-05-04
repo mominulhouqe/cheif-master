@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../../provider/AuthProvider';
-
+import { BsFacebook, BsFillArrowDownRightSquareFill, BsGithub, BsGoogle } from 'react-icons/bs';
 
 const SignUp = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, signInGoogle } = useContext(AuthContext);
+    const [user, setUser] = useState(null);
     const [error, setError] = useState();
     const [success, setSuccess] = useState();
     
@@ -40,10 +41,35 @@ const SignUp = () => {
             })
     }
 
+const handleGooglePopup =()=>{
+    signInGoogle()
+    .then(result => {
+        const loggedUser = result.user;
+        setUser(loggedUser);
+       
+        
+    })
+    .catch((error) =>{
+        setError(error.message)
+    } )
+}
+const handleGithub =()=>{
+    signInGithub()
+    .then(result => {
+        const loggedUser = result.user;
+        setUser(loggedUser);
+       
+    })
+    .catch((error) =>{
+        setError(error.message)
+    } )
+}
+
+
 
     return (
 
-        <div className="w-full max-w-md mx-auto mt-10 mb-10">
+        <div className="w-full max-w-md container mx-auto mt-10 mb-10">
             <form onSubmit={handleRegister} className="bg-white rounded-lg px-8 pt-6 pb-8 mb-4">
                 <div className="mb-4">
                     <label className="block text-gray-700 font-bold mb-2">
@@ -65,7 +91,7 @@ const SignUp = () => {
                         className="form-input rounded-lg w-full py-2  px-4 leading-tight border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                         id="photo"
                         type="photo"
-                        name='photo'
+                        name='photoURL'
                         placeholder="Enter your Photo URL"
                     />
                 </div>
@@ -104,7 +130,15 @@ const SignUp = () => {
                     </button>
 
                 </div>
+
             </form>
+                <div className='flex text-center justify-center flex-wrap gap-5'>
+
+                <button onClick={handleGooglePopup} className='btn flex gap-2 bg-blue-500 '>Continue with Google <BsGoogle className=''></BsGoogle> </button>
+
+                <button onClick={handleGithub} className='btn flex gap-2  bg-blue-500'>Continue with Github <BsGithub className=''></BsGithub> </button>
+
+                </div>
 
         </div>
 
