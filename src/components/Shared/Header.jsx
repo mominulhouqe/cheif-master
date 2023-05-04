@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 
 const Header = () => {
-const { user} = useContext(AuthContext)
-console.log(user);
+// const { user} = useContext(AuthContext)
+// console.log(user);
 
 
   const [isOpen, setIsOpen] = useState(false);
