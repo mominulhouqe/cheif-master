@@ -96,7 +96,7 @@ const ShowDetailsChiefs = ({ data }) => {
                             <li className="mb-2">
                                 <span className="font-bold mb-5 mt-4">Cooking Method : </span>
 
-                                <div className="card w-96 bg-primary text-primary-content">
+                                <div className="card bg-primary text-primary-content">
                                     <div className="card-body">
 
                                         <h2 className="card-title">{cookingMethods[0].name}</h2>
