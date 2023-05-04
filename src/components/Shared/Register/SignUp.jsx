@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../../../provider/AuthProvider';
+
 
 const SignUp = () => {
+    
+const {createrUser} = useContext(AuthContext);
+const [error, setError ] = useState();
+const [sucess, setSucess] = useState();
+
+
+
     return (
         <div>
             <div className="w-full max-w-md mx-auto mt-10 mb-10">
-                <form className="bg-white rounded-lg px-8 pt-6 pb-8 mb-4">
+                <form  className="bg-white rounded-lg px-8 pt-6 pb-8 mb-4">
                     <div className="mb-4">
                         <label className="block text-gray-700 font-bold mb-2">
                             Name
