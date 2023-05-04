@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 import ShowDetailsChiefs from './ShowDetailsChiefs';
 
 const ChefDetails = () => {
@@ -9,8 +9,10 @@ const ChefDetails = () => {
     const data = datas.find((d) => d.id === parseInt(id))
 
     return (
-        <div>
-           This is Details 
+        <div className='container mx-auto'>
+      
+          <Link to='/'><button className='p-5 border font-bold text-2xl container mx-auto'>Back to Home</button> </Link>
+      
            <ShowDetailsChiefs 
            data = {data}
            ></ShowDetailsChiefs>

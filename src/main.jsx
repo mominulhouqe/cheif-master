@@ -9,6 +9,7 @@ import Login from './components/Shared/Register/Login.jsx';
 import SignUp from './components/Shared/Register/SignUp.jsx';
 import Chiefs from './components/ChiefStaap/Chiefs.jsx';
 import ChefDetails from './components/ChefsCategory/ChefDetails.jsx';
+import Blog from './components/Blog/Blog.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         path: '/views/:id',
         element: <ChefDetails />,
        loader:({params}) =>fetch('http://localhost:5000/datas').then((response) => response.json())
+      },
+      {
+        path: '/blog',
+        element: <Blog />
       },
       {
         path: '/login',

@@ -1,12 +1,12 @@
 import React from 'react';
-import { FaAccusoft, FaArrowAltCircleDown, FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 
 const ShowDetailsChiefs = ({ data }) => {
     console.log(data);
     const { id, chefName, experience, recipes, likes, chefPicture, description, ingredients, cookingMethods } = data;
     return (
         <div>
-            <section className="bg-white rounded-lg shadow-lg p-6">
+            <section className="bg-white rounded-lg shadow-lg mx-auto container p-6">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div className="md:col-span-1 lg:col-span-2">
                         <img src={chefPicture} alt={name} className=" rounded-lg shadow-lg mb-6" />
@@ -73,6 +73,10 @@ const ShowDetailsChiefs = ({ data }) => {
                             <li className="mb-2 font-bold">
                                 <span className="font-bold">Expreience : </span> 
                               {experience} Years
+                            </li>
+                            <li className="mb-2 font-bold">
+                                <span className="font-bold">Recipes : </span> 
+                              {recipes} Itmes
                             </li>
                             <li className="mb-2">
                                 <span className="font-bold mb-5 mt-4">Cooking Method : </span>

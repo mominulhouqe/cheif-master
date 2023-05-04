@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="sticky font-mono bg-primary">
+    <nav className="font-mono bg-primary">
       <div className="navbar-container flex justify-between items-center mx-auto max-w-6xl px-4 py-3">
         <a href="#" className="navbar-brand text-2xl font-bold text-white flex-grow">
         The Hungry Fork
@@ -46,6 +46,9 @@ const Header = () => {
         >
           <Link to='/' className="navbar-link text-white hover:text-secondary py-2 lg:py-0 lg:px-4">
             Home
+          </Link>
+          <Link to='/blog' className="navbar-link text-white hover:text-secondary py-2 lg:py-0 lg:px-4">
+            Blog
           </Link>
           <Link to='/about' className="navbar-link text-white hover:text-secondary py-2 lg:py-0 lg:px-4">
             About
