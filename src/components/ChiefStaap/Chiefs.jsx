@@ -15,10 +15,7 @@ const Chiefs = ({ user }) => {
           <p>Like : {likes[0].count} </p>
           <div className="card-actions justify-end">
             <Link
-              to={{
-                pathname: `/views/${id}`,
-                state: { user }
-              }}
+              to={ `/views/${id}` }
             >
               <button className="btn btn-primary">View Recipes</button>
             </Link>

@@ -22,10 +22,7 @@ const router = createBrowserRouter([
       {
         path: '/views/:id',
         element: <ChefDetails />,
-        render: ({ location }) => {
-          const { state } = location;
-          return <ChefDetails chef={state ? state.chef : null} />;
-        }
+       loader:({params}) =>fetch('http://localhost:5000/datas').then((response) => response.json())
       },
       {
         path: '/login',

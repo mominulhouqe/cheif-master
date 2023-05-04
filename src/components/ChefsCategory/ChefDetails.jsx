@@ -1,24 +1,21 @@
 import React, { useEffect, useState } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
+import ShowDetailsChiefs from './ShowDetailsChiefs';
 
 const ChefDetails = () => {
 
-    const [users, setUsers] = useState([]);
-
-    useEffect(() => {
-      fetch('http://localhost:5000/datas')
-        .then(res => res.json())
-        .then(data => setUsers(data))
-        .catch(error => console.log(error));
-    }, []);
-    
+    const {id} = useParams();
+    const datas = useLoaderData();
+    const data = datas.find((d) => d.id === parseInt(id))
 
     return (
         <div>
-            hi {users.length}
+           This is Details 
+           <ShowDetailsChiefs 
+           data = {data}
+           ></ShowDetailsChiefs>
 
 
-
-            
         </div>
     );
 };
