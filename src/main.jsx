@@ -27,15 +27,15 @@ const router = createBrowserRouter([
        loader:({params}) =>fetch('http://localhost:5000/datas').then((response) => response.json())
       },
       {
-        path: '/blog',
+        path: 'blog',
         element: <Blog />
       },
       {
-        path: '/login',
+        path: 'login',
         element: <Login />
       },
       {
-        path: '/register',
+        path: 'register',
         element: <SignUp />
       }
     ]

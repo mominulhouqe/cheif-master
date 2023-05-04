@@ -6,8 +6,7 @@ import { AuthContext } from '../../provider/AuthProvider';
 const Header = () => {
 
   const { user, logOut } = useContext(AuthContext);
-
-
+  
   const handleLogout = () => {
     logOut()
       .then(result => {
@@ -76,8 +75,8 @@ const Header = () => {
           {
             user ?
             <Link to='/register'>
-            <button className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
-              Sign Up
+            <button onClick={handleLogout} className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
+              Register
             </button>
           </Link> :
               <Link to='/login'>

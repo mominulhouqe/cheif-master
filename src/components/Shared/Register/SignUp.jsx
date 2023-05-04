@@ -26,14 +26,19 @@ const SignUp = () => {
   
     // Call the createUser function from the AuthContext to create a new user with the entered data
     createUser(email, password, name, photo)
-      .then(() => {
-        setSucess('User created successfully!');
-        form.reset();
-     
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    .then(result =>{
+        const createdUser = result.user;
+
+        if(createdUser){
+            setSucess("Register Successfully done !!")
+        }
+        // handleEmailVerification(user)
+        form.reset('');
+      
+    })
+    .catch(error =>{
+        setError(error.message)
+    })
   }
 
     return (
