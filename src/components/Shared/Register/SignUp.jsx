@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../../provider/AuthProvider';
 import { BsFacebook, BsFillArrowDownRightSquareFill, BsGithub, BsGoogle } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     const { createUser, signInGoogle } = useContext(AuthContext);
@@ -130,6 +131,7 @@ const handleGithub =()=>{
                     </button>
 
                 </div>
+                    <p>Already Have an account? Please <Link to="/login" className='text-accent font-bold underline'>Login here !!</Link> </p>
 
             </form>
                 <div className='flex text-center justify-center flex-wrap gap-5'>

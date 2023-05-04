@@ -83,6 +83,7 @@ const Login = () => {
           </button>
 
         </div>
+          <p>Are you new here? Please <Link to='/register' className='text-accent font-bold underline'>Register</Link> here </p>
       </form>
 
     </div>
