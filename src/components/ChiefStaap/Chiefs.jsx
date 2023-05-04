@@ -14,15 +14,17 @@ const Chiefs = ({ user }) => {
           <p>Number Of Recipes: {recipes} </p>
           <p>Like : {likes[0].count} </p>
           <div className="card-actions justify-end">
-
-            <Link to="/views">
-             <button className="btn btn-primary">View Recipes</button> 
-             </Link>
-
+            <Link
+              to={{
+                pathname: `/views/${id}`,
+                state: { user }
+              }}
+            >
+              <button className="btn btn-primary">View Recipes</button>
+            </Link>
           </div>
         </div>
       </div>
-
     </div>
   );
 };
