@@ -6,7 +6,7 @@ const ChefsCatagory = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-      fetch('http://localhost:5000/datas')
+      fetch('https://chef-master-server-blond.vercel.app/datas')
         .then(res => res.json())
         .then(data => setUsers(data))
         .catch(error => console.log(error));

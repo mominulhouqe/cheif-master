@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: '/views/:id',
         element: <PrivateRoute> <ChefDetails /> </PrivateRoute>,
-       loader:({params}) =>fetch('http://localhost:5000/datas').then((response) => response.json())
+       loader:({params}) =>fetch('https://chef-master-server-blond.vercel.app/datas').then((response) => response.json())
       },
       {
         path: 'blog',
