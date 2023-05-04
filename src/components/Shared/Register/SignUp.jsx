@@ -19,6 +19,11 @@ const SignUp = () => {
     setSucess('')
 
 
+    if (!/[a-zA-Z\d]{6,}/.test(password)) {
+        setError('at least one lowercase letter.')
+        return;
+      }
+  
     // Call the createUser function from the AuthContext to create a new user with the entered data
     createUser(email, password, name, photo)
       .then(() => {
@@ -68,6 +73,7 @@ const SignUp = () => {
                         id="email"
                         name='email'
                         type="email"
+                        required
                         placeholder="Enter your email address"
                     />
                 </div>
@@ -81,10 +87,11 @@ const SignUp = () => {
                         type="password"
                         name='password'
                         placeholder="Enter your password"
+                        required
                     />
                 </div>
-                <p className='my-5 text-success'>{sucess}</p>
-                <p className='my-5 text-warning'>{error}</p>
+                <p className='my-5 font-semibold text-success'>{sucess}</p>
+                <p className='my-5 font-semibold text-warning'>{error}</p>
 
                 <div className="flex items-center justify-between">
                     <button className="daisy-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">

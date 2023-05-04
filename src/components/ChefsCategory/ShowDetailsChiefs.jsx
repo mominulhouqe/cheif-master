@@ -2,7 +2,7 @@ import React from 'react';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 
 const ShowDetailsChiefs = ({ data }) => {
-    console.log(data);
+    
     const { id, chefName, experience, recipes, likes, chefPicture, description, ingredients, cookingMethods } = data;
     return (
         <div>
