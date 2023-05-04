@@ -30,7 +30,7 @@ const ChefsCatagory = () => {
           </div>
         </div>
       </div> */}
-   <div className="grid grid-cols-3 gap-10">
+   <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {users.map(user => (
           <Chiefs
             key={user.id}
