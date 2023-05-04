@@ -11,11 +11,13 @@ import { BsFillArrowDownRightSquareFill } from 'react-icons/bs';
 
 const Catagory = () => {
     return (
-        <div className='container mx-auto'>
-            <h1>OUT POPULAR FOOD</h1>
-            <p>Best Category Foods Menu</p>
+        <div className='container mt-10 bg-orange-600 p-24 mb-10 mx-auto'>
+            <div className='text-center  text-white font-mono font-extrabold mb-10'>
+                <h1 className='mb-5'>OUR POPULAR FOOD</h1> <hr />
+                <p>Best Category Foods Menu</p>
+            </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
 
                 <div className="card card-side bg-base-100 shadow-xl">
                     <figure>
@@ -23,7 +25,7 @@ const Catagory = () => {
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">Pizza</h2>
-                        <p>Click the button to watch on Jetflix app.</p>
+                        <p>Food can be categorized into different groups .</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary">
                                 <BsFillArrowDownRightSquareFill ></BsFillArrowDownRightSquareFill>
@@ -36,8 +38,8 @@ const Catagory = () => {
                         <img src={img2} alt="Movie" />
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title">New movie is released!</h2>
-                        <p>Click the button to watch on Jetflix app.</p>
+                        <h2 className="card-title">Burger!</h2>
+                        <p>Food refers to any substance that is consumed by living  of tissues. </p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary">    <BsFillArrowDownRightSquareFill ></BsFillArrowDownRightSquareFill></button>
                         </div>
@@ -48,8 +50,8 @@ const Catagory = () => {
                         <img src={img3} alt="Movie" />
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title">New movie is released!</h2>
-                        <p>Click the button to watch on Jetflix app.</p>
+                        <h2 className="card-title">Bread!</h2>
+                        <p>Different cultures around the world have their own unique ces. .</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary">    <BsFillArrowDownRightSquareFill ></BsFillArrowDownRightSquareFill></button>
                         </div>
@@ -60,8 +62,9 @@ const Catagory = () => {
                         <img src={img4} alt="Movie" />
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title">New movie is released!</h2>
-                        <p>Click the button to watch on Jetflix app.</p>
+                        <h2 className="card-title">Seafoods</h2>
+                            <p>
+                       Food also plays an important role, and gatherings..</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary">    <BsFillArrowDownRightSquareFill ></BsFillArrowDownRightSquareFill></button>
                         </div>
@@ -72,8 +75,8 @@ const Catagory = () => {
                         <img src={img5} alt="Movie" />
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title">New movie is released!</h2>
-                        <p>Click the button to watch on Jetflix app.</p>
+                        <h2 className="card-title">Coffee </h2>
+                        <p>food is a fundamental aidentity..</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary">    <BsFillArrowDownRightSquareFill ></BsFillArrowDownRightSquareFill></button>
                         </div>
@@ -84,8 +87,8 @@ const Catagory = () => {
                         <img src={img6} alt="Movie" />
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title">New movie is released!</h2>
-                        <p>Click the button to watch on Jetflix app.</p>
+                        <h2 className="card-title">Chicken</h2>
+                        <p>Fats are another source of energy and can be found s.</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary">    <BsFillArrowDownRightSquareFill ></BsFillArrowDownRightSquareFill></button>
                         </div>

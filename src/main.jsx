@@ -7,6 +7,7 @@ import Main from './components/Shared/Main.jsx';
 import Home from './components/Shared/Home.jsx';
 import Login from './components/Shared/Register/Login.jsx';
 import SignUp from './components/Shared/Register/SignUp.jsx';
+import Chiefs from './components/ChiefStaap/Chiefs.jsx';
 
 
 
