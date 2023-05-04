@@ -4,9 +4,19 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 
 const Header = () => {
-// const { user} = useContext(AuthContext)
-// console.log(user);
 
+  const { user, logOut } = useContext(AuthContext);
+
+
+  const handleLogout = () => {
+    logOut()
+      .then(result => {
+        console.log(result);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,7 +28,7 @@ const Header = () => {
     <nav className="font-mono bg-primary">
       <div className="navbar-container flex justify-between items-center mx-auto max-w-6xl px-4 py-3">
         <a href="#" className="navbar-brand text-2xl font-bold text-white flex-grow">
-        The Hungry Fork
+          The Hungry Fork
         </a>
         <button className="navbar-toggler ml-auto my-3 me-5 text-white lg:hidden" onClick={toggleMenu}>
           {isOpen ? (
@@ -44,9 +54,8 @@ const Header = () => {
           )}
         </button>
         <div
-          className={`navbar-menu lg:flex lg:items-center ${
-            isOpen ? 'flex flex-col lg:flex-row lg:ml-auto' : 'hidden'
-          }`}
+          className={`navbar-menu lg:flex lg:items-center ${isOpen ? 'flex flex-col lg:flex-row lg:ml-auto' : 'hidden'
+            }`}
           id="navbar-menu"
         >
           <Link to='/' className="navbar-link text-white hover:text-secondary py-2 lg:py-0 lg:px-4">
@@ -62,17 +71,24 @@ const Header = () => {
             Contact
           </Link>
 
-          <Link to='/login'>
-          <button className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
-            Sign In
-          </button>
-          </Link>
+          
 
-          <Link to='/register'>
-          <button className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
-            Sign Up
-          </button>
-          </Link>
+          {
+            user ?
+            <Link to='/register'>
+            <button className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
+              Sign Up
+            </button>
+          </Link> :
+              <Link to='/login'>
+              <button className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
+                Sign In
+              </button>
+            </Link>
+
+          }
+
+         
 
         </div>
       </div>
