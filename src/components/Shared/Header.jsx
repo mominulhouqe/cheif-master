@@ -6,7 +6,7 @@ import { AuthContext } from '../../provider/AuthProvider';
 const Header = () => {
 
   const { user, logOut } = useContext(AuthContext);
-  
+
   const handleLogout = () => {
     logOut()
       .then(result => {
@@ -70,24 +70,42 @@ const Header = () => {
             Contact
           </Link>
 
-          
+          {user &&
+            <div className="flex items-center">
+              {user.photoURL && <img src={user.photoURL} alt="user profile" className="w-8 h-8 rounded-full mr-2" />}
+              <div className="relative">
+                <button className="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg" aria-label="User profile">
+                  {user.displayName}
+                </button>
+                <span className="hidden group-hover:block absolute top-full left-1/2 transform -translate-x-1/2 mt-1 px-2 py-1 text-xs text-gray-600 bg-gray-200 rounded-lg whitespace-nowrap">
+                  {user.email}
+                </span>
+              </div>
+            </div>
+          }
+
 
           {
             user ?
-            <Link to='/register'>
-            <button onClick={handleLogout} className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
-              Register
-            </button>
-          </Link> :
-              <Link to='/login'>
-              <button className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
-                Sign In
-              </button>
-            </Link>
-
+              <button onClick={handleLogout} className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
+                Logout
+              </button> :
+              <>
+                <Link to='/login'>
+                  <button className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
+                    Sign In
+                  </button>
+                </Link>
+                <Link to='/register' className="hidden lg:inline">
+                  <button className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
+                    Register
+                  </button>
+                </Link>
+              </>
           }
 
-         
+
+
 
         </div>
       </div>

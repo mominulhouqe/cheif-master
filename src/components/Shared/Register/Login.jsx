@@ -7,7 +7,7 @@ const Login = () => {
   const [error, setError] = useState();
     const [success, setSucces] = useState();
     const location = useLocation();
-    const from = location.state?.from?.pathname
+    const from = location.state?.from?.pathname || '/'
 
     const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();
