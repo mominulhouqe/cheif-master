@@ -8,6 +8,7 @@ import Home from './components/Shared/Home.jsx';
 import Login from './components/Shared/Register/Login.jsx';
 import SignUp from './components/Shared/Register/SignUp.jsx';
 import Chiefs from './components/ChiefStaap/Chiefs.jsx';
+import ChefDetails from './components/ChefsCategory/ChefDetails.jsx';
 
 
 
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
       {
         path:"/",
         element: <Home></Home>
+      },
+      {
+        path: '/views',
+        element: <ChefDetails></ChefDetails>,
+        
       },
       {
         path:'/login',

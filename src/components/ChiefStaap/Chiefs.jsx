@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Chiefs = ({ user }) => {
   const { id, chefName, experience, recipes, likes, chefPicture } = user;
@@ -14,8 +15,10 @@ const Chiefs = ({ user }) => {
           <p>Like : {likes[0].count} </p>
           <div className="card-actions justify-end">
 
-            <button className="btn btn-primary">View Recipes</button>
-            
+            <Link to="/views">
+             <button className="btn btn-primary">View Recipes</button> 
+             </Link>
+
           </div>
         </div>
       </div>
