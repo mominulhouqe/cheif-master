@@ -16,9 +16,7 @@ const ShowDetailsChiefs = ({ data }) => {
             setLove(true)
             toast("You added your favorit list")
         }
-        else {
-            toast("You can't added More")
-        }
+        
     }
 
 
