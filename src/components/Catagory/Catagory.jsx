@@ -63,8 +63,8 @@ const Catagory = () => {
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">Seafoods</h2>
-                            <p>
-                       Food also plays an important role, and gatherings..</p>
+                        <p>
+                            Food also plays an important role, and gatherings..</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary">    <BsFillArrowDownRightSquareFill ></BsFillArrowDownRightSquareFill></button>
                         </div>
