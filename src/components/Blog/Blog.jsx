@@ -1,60 +1,143 @@
-import React from 'react';
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+import React from "react";
+import { useRef } from "react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 const Blog = () => {
+  const contentRef = useRef(DataView);
 
-    
+  const generatePDF = () => {
+    html2canvas(contentRef.current).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      pdf.addImage(imgData, "PNG", 0, 0);
+      pdf.save('download.pdf', { encoding: 'UTF-8' });
+    });
+  };
 
-    return (
-        <>
+  return (
+    <>
+      <div>
+        <div className="p-12 text-center">
+          <h1 className="py-12 text-4xl font-sans font-bold">
+            Blogs Post
+          </h1>
+          <div
+         tabIndex={0} className="mx-auto card border border-base-300 bg-base-100 rounded-box sm:w-1/2 lg:w-2/3 my-5">
+
          
-            <div className='container mx-auto text-white '>
-                <div className='bg-accent mt-5 p-5 mb-5'>
-                    <h2>Question - 1</h2>
-                    <span>Tell us the differences between uncontrolled and controlled components.</span>
-
-                    <article>
-                        Ans:
-                        The differences between controlled and uncontrolled components are significant, as they can affect the overall performance and functionality of a software application or system. In general, it is preferable to use controlled components wherever possible, as they offer greater control and predictability over the system's behavior. However, in some cases, uncontrolled components may be necessary or desirable, such as when working with external hardware devices or integrating with other applications or services.
-                    </article>
-                </div>
-                <div className='bg-accent mt-5 p-5 mb-5'>
-                    <h2>Question - 2</h2>
-                    <span>How to validate React props using PropTypes</span>
-
-                    <article>
-                        Ans:
-
-                        React PropTypes is a tool that allows you to validate the type of data being passed through props to React components. This helps to ensure that the data being used by a component is of the correct type and format, which can prevent errors and improve the overall reliability of your code.
-                    </article>
-                </div>
-                <div className='bg-accent mt-5 p-5 mb-5'>
-                    <h2>Question - 3</h2>
-                    <span>Tell us the difference between nodejs and express .</span>
-
-                    <article>
-                        Ans:
-
-                        Node.js and Express are two popular web development technologies that are often used together to build server-side web applications. While they are related and often used together, there are some key differences between the two.
-
-                        Node.js is a runtime environment for executing JavaScript code outside of a web browser. It allows developers to use JavaScript for server-side programming, allowing them to build web applications entirely in JavaScript. Node.js provides a set of built-in modules that can be used to handle tasks such as file input/output, networking, and cryptography. Node.js is often used to build backend services and APIs, as well as real-time applications such as chat apps.
-                    </article>
-                </div>
-                <div className='bg-accent mt-5 p-5 mb-5'>
-                    <h2>Question - 4</h2>
-                    <span>What is a custom hook, and why will you create a custom hook?.</span>
-
-                    <article>
-                        Ans:
-                        In React, a custom hook is a reusable function that encapsulates a specific behavior and can be shared across multiple components. Custom hooks are a way to extract logic from components and reuse it across different parts of your application.
-
-                        You might create a custom hook if you find yourself repeating the same code across multiple components, or if you need to manage state in a more complex way than is possible with standard React hooks. Custom hooks can help simplify your code and make it more reusable, while also making it easier to test and maintain.
-                    </article>
-                </div>
-                
-
+            <div className=" text-xl font-medium bg-success">
+              1.Tell us the differences between uncontrolled and controlled
+              components?
             </div>
-        </>
-    );
+            <div className=" text-sm sm:text-base ">
+              <p ref={contentRef} className="py-5">
+                In React, controlled components are those that are bound to a
+                state value and are modified via user input by updating the
+                state value. They rely on the parent component to manage the
+                state and handle all user input.
+                <br />
+                In contrast, uncontrolled components are components that do not
+                rely on a state value to function, but instead manage their own
+                state internally through the DOM. They are usually created using
+                refs in React. Controlled components provide a more reliable way
+                of managing state, while uncontrolled components are easier to
+                set up but may lead to inconsistencies.
+              </p>
+            </div>
+          </div>
+          <div
+            tabIndex={0}
+            className="mx-auto border border-base-300 bg-base-100 rounded-box sm:w-1/2 lg:w-2/3 my-5"
+          >
+            <div className="text-xl font-medium bg-success">
+              2.How to validate React props using PropTypes?
+            </div>
+            <div className="text-sm sm:text-base ">
+              <p className="py-5">
+                React PropTypes is a type checking library that allows
+                developers to validate the props being passed to a React
+                component. It can help catch bugs early by checking that the
+                props are of the expected type. <br />
+                <br />
+                By using PropTypes to validate our props, we can catch errors
+                and improve the robustness of our React components.
+              </p>
+            </div>
+          </div>
+          <div
+            tabIndex={0}
+            className="mx-auto  border border-base-300 bg-base-100 rounded-box sm:w-1/2 lg:w-2/3 my-5"
+          >
+            <div className="collapse-title text-xl font-medium bg-success">
+              3.Tell us the difference between nodejs and express js.?
+            </div>
+            <div className=" text-sm sm:text-base ">
+              <p className="py-5">
+                <strong>Node.js:</strong> is a JavaScript runtime that allows
+                developers to run JavaScript code on the server-side. It uses
+                the V8 JavaScript engine from Google Chrome to execute
+                JavaScript code outside of the browser environment. Node.js
+                provides a rich set of built-in modules for working with file
+                system, networking, and other aspects of server-side
+                development.
+                <br />
+                <br />
+                <strong>Express.js:</strong> is a lightweight and flexible web
+                application framework built on top of Node.js. It provides a set
+                of features and utilities for building web applications and
+                APIs, such as routing, middleware, and HTTP request/response
+                handling. Express.js allows developers to easily create
+                server-side applications and APIs, and it has a wide range of
+                community-contributed middleware and plugins that can extend its
+                functionality.
+              </p>
+            </div>
+          </div>
+          <div
+            tabIndex={0}
+            className="mx-auto border border-base-300 bg-base-100 rounded-box sm:w-1/2 lg:w-2/3 my-5"
+          >
+            <div className=" text-xl font-medium bg-success">
+              4.What is a custom hook, and why will you create a custom hook??
+            </div>
+            <div className=" text-sm sm:text-base ">
+              <p className="py-5">
+                <strong> Custom Hooks:</strong> are used to reuse stateful logic
+                easily across different components in an optimized and scalable
+                format. Custom Hooks also produce a clean and structured
+                codebase that reduces complexity and redundancy in your React
+                project. <br />
+                <br />
+                Custom hooks can call hooks themselves, such as useEffect and
+                useState. These built-in React hooks can work in custom hooks
+                the same way they work in components. custom hooks can help to
+                write cleaner, more efficient code that is easier to maintain
+                and extend over time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* pdf generator */}
+      <div className="text-center">
+        <h1 className="text-2xl font-bold mb-5">
+          Download Cv
+        </h1>
+
+        <button
+          className="bg-success text-white py-5 px-10 justify-center rounded"
+          onClick={generatePDF}
+        >
+          Download PDF
+        </button>
+      </div>
+      {/* end pdf generator */}
+    </>
+  );
 };
 
 export default Blog;
