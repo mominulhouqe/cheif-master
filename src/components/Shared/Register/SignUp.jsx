@@ -1,15 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../../provider/AuthProvider';
 import { BsFacebook, BsFillArrowDownRightSquareFill, BsGithub, BsGoogle } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
     const { createUser, signInGoogle,signInGithub } = useContext(AuthContext);
     const [user, setUser] = useState(null);
     const [error, setError] = useState();
     const [success, setSuccess] = useState();
-    
 
+    const navigate = useNavigate();
     const handleRegister = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -25,6 +25,7 @@ const SignUp = () => {
             return;
         }
 
+    
         // Call the createUser function from the AuthContext to create a new user with the entered data
         createUser(email, password, name, photo)
             .then(result => {
@@ -34,7 +35,7 @@ const SignUp = () => {
                     setSuccess('Register Successfully done !!');
                  
                 }
-
+                navigate('/login')
                 form.reset('');
             })
             .catch(error => {
@@ -42,12 +43,14 @@ const SignUp = () => {
             })
     }
 
+
+
 const handleGooglePopup =()=>{
     signInGoogle()
     .then(result => {
         const loggedUser = result.user;
         setUser(loggedUser);
-       
+        navigate('/')
         
     })
     .catch((error) =>{
@@ -59,6 +62,7 @@ const handleGithub = () =>{
     .then(result => {
         const loggedUser = result.user;
         setUser(loggedUser);
+        navigate('/')
        
         
     })
