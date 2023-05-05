@@ -1,7 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, lazy, Suspense } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import LazyLoad from 'react-lazyload';
+import { getAuth } from "firebase/auth";
 
 const Header = () => {
 
@@ -16,7 +18,7 @@ const Header = () => {
         console.log(error);
       })
   }
-
+  
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -72,7 +74,13 @@ const Header = () => {
 
           {user &&
             <div className="flex items-center">
-              {user?.photoURL && <img  src={user?.photoURL} alt="user profile" className="w-8 h-8 rounded-full mr-2" />}
+
+              {user?.photoURL &&
+                <LazyLoad placeholder={<div>Loading...</div>}>
+                  <img src={user?.photoURL} alt="user profile" className="w-8 h-8 rounded-full mr-2" />
+                </LazyLoad>
+              }
+
               <div className="relative">
                 <button className="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg" aria-label="User profile">
                   {user.displayName}

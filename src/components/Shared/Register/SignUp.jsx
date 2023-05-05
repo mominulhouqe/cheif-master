@@ -4,7 +4,7 @@ import { BsFacebook, BsFillArrowDownRightSquareFill, BsGithub, BsGoogle } from '
 import { Link } from 'react-router-dom';
 
 const SignUp = () => {
-    const { createUser, signInGoogle } = useContext(AuthContext);
+    const { createUser, signInGoogle,signInGithub } = useContext(AuthContext);
     const [user, setUser] = useState(null);
     const [error, setError] = useState();
     const [success, setSuccess] = useState();
@@ -54,19 +54,18 @@ const handleGooglePopup =()=>{
         setError(error.message)
     } )
 }
-const handleGithub =()=>{
+const handleGithub = () =>{
     signInGithub()
     .then(result => {
         const loggedUser = result.user;
         setUser(loggedUser);
        
+        
     })
     .catch((error) =>{
         setError(error.message)
     } )
 }
-
-
 
     return (
 
