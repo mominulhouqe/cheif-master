@@ -78,16 +78,52 @@ const ShowDetailsChiefs = ({ data }) => {
                                         <img src={img2} className='w-80' alt="" />
                                         <h2 className="card-title">{cookingMethods[0].name}</h2>
                                         <p>{cookingMethods[0].description} </p>
+                                        <li className="mb-2">
+                                            <span className="font-bold">Ingredients:</span>
+                                            <div className="overflow-x-auto">
+                                                <table className="table text-black w-full">
+                                                    {/* head */}
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>Name</th>
+                                                            <th>quantity</th>
 
-                                        <table className='table '>
-                                        <tr>
-                                            <th>1</th>
-                                            <td>{ingredients[0].name}</td>
-                                            <td> {ingredients[0].quantity}</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {/* row 1 */}
+                                                        <tr>
+                                                            <th>1</th>
+                                                            <td>{ingredients[0].name}</td>
+                                                            <td> {ingredients[0].quantity}</td>
 
-                                        </tr>
-                                        </table>
+                                                        </tr>
+                                                        {/* row 2 */}
+                                                        <tr>
+                                                            <th>2</th>
+                                                            <td>{ingredients[1].name}</td>
+                                                            <td>{ingredients[1].quantity}</td>
 
+                                                        </tr>
+                                                        {/* row 3 */}
+                                                        <tr>
+                                                            <th>3</th>
+                                                            <td>{ingredients[2].name}</td>
+                                                            <td>{ingredients[2].quantity}</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th>4</th>
+                                                            <td>{ingredients[3].name}</td>
+                                                            <td> {ingredients[4].quantity}</td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </li>
                                         <div className="card-actions justify-end">
                                             <button className="btn ">details <FaArrowAltCircleRight className='mx-2'></FaArrowAltCircleRight> </button>
                                         </div>
@@ -99,6 +135,52 @@ const ShowDetailsChiefs = ({ data }) => {
                                         <img src={img3} className=' h-80 ' alt="" />
                                         <h2 className="card-title">{cookingMethods[1].name}</h2>
                                         <p>{cookingMethods[1].description} </p>
+                                        <li className="mb-2">
+                                            <span className="font-bold">Ingredients:</span>
+                                            <div className="overflow-x-auto">
+                                                <table className="table text-black w-full">
+                                                    {/* head */}
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>Name</th>
+                                                            <th>quantity</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {/* row 1 */}
+                                                        <tr>
+                                                            <th>1</th>
+                                                            <td>{ingredients[0].name}</td>
+                                                            <td> {ingredients[0].quantity}</td>
+
+                                                        </tr>
+                                                        {/* row 2 */}
+                                                        <tr>
+                                                            <th>2</th>
+                                                            <td>{ingredients[1].name}</td>
+                                                            <td>{ingredients[1].quantity}</td>
+
+                                                        </tr>
+                                                        {/* row 3 */}
+                                                        <tr>
+                                                            <th>3</th>
+                                                            <td>{ingredients[2].name}</td>
+                                                            <td>{ingredients[2].quantity}</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th>4</th>
+                                                            <td>{ingredients[3].name}</td>
+                                                            <td> {ingredients[4].quantity}</td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </li>
 
                                         <div className="card-actions justify-end">
                                             <button className="btn">details <FaArrowAltCircleRight className='mx-2'></FaArrowAltCircleRight> </button>
@@ -113,7 +195,52 @@ const ShowDetailsChiefs = ({ data }) => {
                                         <h2 className="card-title ">{cookingMethods[2].name}</h2>
                                         <p>{cookingMethods[2].description} </p>
 
+                                        <li className="mb-2">
+                                            <span className="font-bold">Ingredients:</span>
+                                            <div className="overflow-x-auto">
+                                                <table className="table text-black w-full">
+                                                    {/* head */}
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>Name</th>
+                                                            <th>quantity</th>
 
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {/* row 1 */}
+                                                        <tr>
+                                                            <th>1</th>
+                                                            <td>{ingredients[0].name}</td>
+                                                            <td> {ingredients[0].quantity}</td>
+
+                                                        </tr>
+                                                        {/* row 2 */}
+                                                        <tr>
+                                                            <th>2</th>
+                                                            <td>{ingredients[1].name}</td>
+                                                            <td>{ingredients[1].quantity}</td>
+
+                                                        </tr>
+                                                        {/* row 3 */}
+                                                        <tr>
+                                                            <th>3</th>
+                                                            <td>{ingredients[2].name}</td>
+                                                            <td>{ingredients[2].quantity}</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th>4</th>
+                                                            <td>{ingredients[3].name}</td>
+                                                            <td> {ingredients[4].quantity}</td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </li>
 
                                         <div className="card-actions justify-end">
 
@@ -127,54 +254,6 @@ const ShowDetailsChiefs = ({ data }) => {
                             </li>
 
 
-                            <ol>
-                                <li className="mb-2">
-                                    <span className="font-bold">Ingredients:</span>
-                                    <div className="overflow-x-auto">
-                                        <table className="table w-full">
-                                            {/* head */}
-                                            <thead>
-                                                <tr>
-                                                    <th></th>
-                                                    <th>Name</th>
-                                                    <th>quantity</th>
-
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {/* row 1 */}
-                                                <tr>
-                                                    <th>1</th>
-                                                    <td>{ingredients[0].name}</td>
-                                                    <td> {ingredients[0].quantity}</td>
-
-                                                </tr>
-                                                {/* row 2 */}
-                                                <tr>
-                                                    <th>2</th>
-                                                    <td>{ingredients[1].name}</td>
-                                                    <td>{ingredients[1].quantity}</td>
-
-                                                </tr>
-                                                {/* row 3 */}
-                                                <tr>
-                                                    <th>3</th>
-                                                    <td>{ingredients[2].name}</td>
-                                                    <td>{ingredients[2].quantity}</td>
-
-                                                </tr>
-                                                <tr>
-                                                    <th>4</th>
-                                                    <td>{ingredients[3].name}</td>
-                                                    <td> {ingredients[4].quantity}</td>
-
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                                </li>
-                            </ol>
 
 
 
