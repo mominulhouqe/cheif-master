@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { BsFillArrowDownRightSquareFill } from 'react-icons/bs';
@@ -6,7 +6,18 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ShowDetailsChiefs = ({ data }) => {
-    const notify = () => toast("You added your favourit list!");
+    const [love, setLove] = useState(false)
+    const handleFavorit = () => {
+         
+        if (!love) {
+            setLove(true)
+            toast("You added your favorit list")
+        }
+        else{
+            toast("You can't added More")
+        }
+    }
+
 
     const { id, chefName, experience, rating, recipes, likes, chefPicture, description, ingredients, cookingMethods } = data;
     return (
@@ -21,19 +32,29 @@ const ShowDetailsChiefs = ({ data }) => {
                             {/* <p className="text-lg">{rating} ({reviews} reviews)</p> */}
                         </div>
                         <p className="text-lg mb-4">{description}</p>
-                        <button onClick={notify} className='btn btn-primary mx-5'> Favorite :  {likes[1].count} </button>
-                        <ToastContainer />
+                        <div className='flex'>
+                            <button onClick={handleFavorit} className='btn btn-success  mx-5'>
 
-                        <div className="rating rating-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red" className="w-6 h-6">
+                                    <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+                                </svg>
 
-                            <input type="radio" name="rating-9" className="rating-hidden" />
-                            <input type="radio" name="rating-9" className="mask mask-star-2" />
-                            <input type="radio" name="rating-9" className="mask mask-star-2"  />
-                            <input type="radio" name="rating-9" className="mask mask-star-2" />
-                            <input type="radio" name="rating-9" className="mask mask-star-2" checked />
-                            <input type="radio" name="rating-9" className="mask mask-star-2" />
+                                {likes[1].count} </button>
+
+                            <ToastContainer />
+
+                            <div className="rating rating-lg">
+
+                                <input type="radio" name="rating-9" className="rating-hidden" />
+                                <input type="radio" name="rating-9" className="mask mask-star-2" />
+                                <input type="radio" name="rating-9" className="mask mask-star-2" />
+                                <input type="radio" name="rating-9" className="mask mask-star-2" />
+                                <input type="radio" name="rating-9" className="mask mask-star-2" />
+                                <input type="radio" name="rating-9" className="mask mask-star-2" />
+                            </div>
                         </div>
                     </div>
+                    
                     <div className="md:col-span-1 lg:col-span-1">
                         <h3 className="text-xl font-bold mb-4">Popular Dishes</h3>
                         <ul className="list-none">
