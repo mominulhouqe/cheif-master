@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <nav className="font-mono bg-primary">
-      <div className="navbar-container lg:navbar  mx-auto max-w-6xl px-4 py-3">
+      <div className="navbar-container container lg:navbar  mx-auto max-w-6xl px-4 py-3">
         <a href="#" className="navbar-brand text-2xl font-bold text-white flex-grow">
           The Hungry Fork
         </a>
