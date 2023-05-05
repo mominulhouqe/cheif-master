@@ -4,16 +4,19 @@ import Rating from 'react-rating';
 import { BsFillArrowDownRightSquareFill } from 'react-icons/bs';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import img1 from '../../assets/icon-1.png'
+import img2 from '../../assets/icon-2.png'
+import img3 from '../../assets/icon-3.png'
 
 const ShowDetailsChiefs = ({ data }) => {
     const [love, setLove] = useState(false)
     const handleFavorit = () => {
-         
+
         if (!love) {
             setLove(true)
             toast("You added your favorit list")
         }
-        else{
+        else {
             toast("You can't added More")
         }
     }
@@ -53,11 +56,77 @@ const ShowDetailsChiefs = ({ data }) => {
                                 <input type="radio" name="rating-9" className="mask mask-star-2" />
                             </div>
                         </div>
+                        <div className='mt-10'>
+                            <li className="mb-2 font-bold">
+                                <span className="font-bold">Expreience : </span>
+                                {experience} Years
+                            </li>
+                            <li className="mb-2 font-bold">
+                                <span className="font-bold">Recipes : </span>
+                                {recipes} Itmes
+                            </li>
+                        </div>
                     </div>
-                    
+
                     <div className="md:col-span-1 lg:col-span-1">
                         <h3 className="text-xl font-bold mb-4">Popular Dishes</h3>
                         <ul className="list-none">
+                            <li className="mb-6">
+
+                                <div className="card  mb-5 bg-indigo-500 text-primary-content">
+                                    <div className="card-body">
+                                        <img src={img2} className='w-80' alt="" />
+                                        <h2 className="card-title">{cookingMethods[0].name}</h2>
+                                        <p>{cookingMethods[0].description} </p>
+
+                                        <table className='table '>
+                                        <tr>
+                                            <th>1</th>
+                                            <td>{ingredients[0].name}</td>
+                                            <td> {ingredients[0].quantity}</td>
+
+                                        </tr>
+                                        </table>
+
+                                        <div className="card-actions justify-end">
+                                            <button className="btn ">details <FaArrowAltCircleRight className='mx-2'></FaArrowAltCircleRight> </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="card mb-5  bg-slate-800 text-primary-content">
+                                    <div className="card-body">
+                                        <img src={img3} className=' h-80 ' alt="" />
+                                        <h2 className="card-title">{cookingMethods[1].name}</h2>
+                                        <p>{cookingMethods[1].description} </p>
+
+                                        <div className="card-actions justify-end">
+                                            <button className="btn">details <FaArrowAltCircleRight className='mx-2'></FaArrowAltCircleRight> </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div className="card bg-primary text-primary-content">
+                                    <div className="card-body">
+                                        <img src={img2} alt="" className=' h-80 ' />
+                                        <h2 className="card-title ">{cookingMethods[2].name}</h2>
+                                        <p>{cookingMethods[2].description} </p>
+
+
+
+                                        <div className="card-actions justify-end">
+
+                                            <button className="btn"> Details
+                                                <FaArrowAltCircleRight className='mx-2'></FaArrowAltCircleRight> </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </li>
+
+
                             <ol>
                                 <li className="mb-2">
                                     <span className="font-bold">Ingredients:</span>
@@ -106,41 +175,8 @@ const ShowDetailsChiefs = ({ data }) => {
 
                                 </li>
                             </ol>
-                            <li className="mb-2 font-bold">
-                                <span className="font-bold">Expreience : </span>
-                                {experience} Years
-                            </li>
-                            <li className="mb-2 font-bold">
-                                <span className="font-bold">Recipes : </span>
-                                {recipes} Itmes
-                            </li>
-                            <li className="mb-2">
-                                <span className="font-bold mb-5 mt-4">Cooking Method : </span>
-
-                                <div className="card bg-primary text-primary-content">
-                                    <div className="card-body">
-
-                                        <h2 className="card-title">{cookingMethods[0].name}</h2>
-                                        <p>{cookingMethods[0].description} </p>
-
-                                        <h2 className="card-title">{cookingMethods[1].name}</h2>
-                                        <p>{cookingMethods[1].description} </p>
-
-                                        <h2 className="card-title">{cookingMethods[2].name}</h2>
-                                        <p>{cookingMethods[2].description} </p>
 
 
-
-                                        <div className="card-actions justify-end">
-
-                                            <button className="btn"> Details
-                                                <FaArrowAltCircleRight className='mx-2'></FaArrowAltCircleRight> </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </li>
 
                         </ul>
                     </div>
