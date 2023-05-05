@@ -42,8 +42,6 @@ const Login = () => {
         setError(error.message);
       })
   }
-
-
   return (
     <div className="w-full max-w-md mx-auto mt-10 mb-10">
       <form onSubmit={handleLogin} className="bg-white rounded-lg px-8 pt-6 pb-8 mb-4">

@@ -1,15 +1,6 @@
 import React from 'react';
-import { CardGroup } from 'react-bootstrap';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-
-
 
 const ChefUser = () => {
-    // const { id, chefName, chefPicture, experience, likes, recipes } = data;
-    // console.log(data);
-
     return (
         <div>
             <div className='bg-orange-100 p-10 container mx-auto'>

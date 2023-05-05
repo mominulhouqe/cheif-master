@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <nav className="font-mono bg-primary">
-      <div className="navbar-container flex justify-between items-center mx-auto max-w-6xl px-4 py-3">
+      <div className="navbar-container lg:navbar  mx-auto max-w-6xl px-4 py-3">
         <a href="#" className="navbar-brand text-2xl font-bold text-white flex-grow">
           The Hungry Fork
         </a>
@@ -72,7 +72,7 @@ const Header = () => {
             Contact
           </Link>
           {user &&
-            <div className="flex items-center">
+            <div className="flex items-center ">
               {user?.photoURL &&
                 <LazyLoad placeholder={<div>Loading...</div>}>
                   <div className="tooltip  tooltip-bottom" data-tip={user.displayName}>
@@ -86,17 +86,17 @@ const Header = () => {
 
           {
             user ?
-              <button onClick={handleLogout} className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
+              <button onClick={handleLogout} className=" text-white py-5 rounded-lg ml-6">
                 Logout
               </button> :
               <>
                 <Link to='/login'>
-                  <button className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
+                  <button className=" text-white py-5 rounded-lg ml-6">
                     Sign In
                   </button>
                 </Link>
-                <Link to='/register' className="hidden lg:inline">
-                  <button className="bg-accent text-white py-2 px-4 rounded-lg ml-3 lg:ml-6">
+                <Link to='/register' className="">
+                  <button className=" text-white py-5 rounded-lg ml-6">
                     Register
                   </button>
                 </Link>
