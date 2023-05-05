@@ -1,9 +1,12 @@
 import React from 'react';
 
 const Blog = () => {
+
+    
+
     return (
         <>
-
+         
             <div className='container mx-auto text-white '>
                 <div className='bg-accent mt-5 p-5 mb-5'>
                     <h2>Question - 1</h2>
@@ -47,6 +50,7 @@ const Blog = () => {
                         You might create a custom hook if you find yourself repeating the same code across multiple components, or if you need to manage state in a more complex way than is possible with standard React hooks. Custom hooks can help simplify your code and make it more reusable, while also making it easier to test and maintain.
                     </article>
                 </div>
+                
 
             </div>
         </>
