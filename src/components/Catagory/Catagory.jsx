@@ -12,9 +12,9 @@ import { BsFillArrowDownRightSquareFill } from 'react-icons/bs';
 const Catagory = () => {
     return (
         <div className='container mt-10 bg-orange-600 p-16 mx-auto'>
-            <div className='text-center  text-white font-mono font-extrabold mb-10'>
-                <h1 className='mb-5'>OUR POPULAR FOOD</h1> <hr />
-                <p>Best Category Foods Menu</p>
+            <div className='text-center  text-white mb-10'>
+                <h1 className='mb-5 font-mono font-extrabold  text-4xl'>Our Services</h1> <hr />
+                <p>WHAT WE OFFER</p>
             </div>
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">

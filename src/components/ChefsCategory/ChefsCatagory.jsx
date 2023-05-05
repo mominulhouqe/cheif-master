@@ -16,8 +16,8 @@ const ChefsCatagory = () => {
   return (
     <div className='bg-orange-100 p-10 container mx-auto'>
       <div className='text-center text-orange-500 font-mono font-extrabold mb-10'>
-        <h1 className='mb-5'>OUR POPULAR CHIEF</h1> <hr />
-        <p>Best Category Foods Menu </p>
+        <h1 className='mb-5 font-extrabold  text-4xl'>OUR POPULAR CHIEF</h1> <hr />
+        <p className='text-2xl'>Best Chief  </p>
      
       </div>
      
