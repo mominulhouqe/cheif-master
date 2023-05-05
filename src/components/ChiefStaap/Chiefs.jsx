@@ -26,6 +26,7 @@ const Chiefs = ({ user }) => {
             </svg>
             
             {likeCount}
+            <ToastContainer></ToastContainer>
           </button>
     
           <div className="card-actions justify-end">
