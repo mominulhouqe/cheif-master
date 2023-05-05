@@ -1,9 +1,9 @@
-import React, { useContext, useState, lazy, Suspense } from 'react';
+import React, { useContext, useState } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import LazyLoad from 'react-lazyload';
-import { getAuth } from "firebase/auth";
+
 
 const Header = () => {
 

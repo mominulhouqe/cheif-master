@@ -4,6 +4,7 @@ import Chiefs from '../ChiefStaap/Chiefs';
 import Banner from '../Banner/Banner';
 import Catagory from '../Catagory/Catagory';
 import ChefsCatagory from '../ChefsCategory/ChefsCatagory';
+import Slider from '../Slider/Slider';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
         <Banner></Banner>
         <Catagory></Catagory>
         <ChefsCatagory></ChefsCatagory>
+        <Slider></Slider>
   
      </div>
     );
