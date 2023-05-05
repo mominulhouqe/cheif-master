@@ -18,7 +18,7 @@ const Header = () => {
         console.log(error);
       })
   }
-  
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -71,27 +71,18 @@ const Header = () => {
           <Link to="/contact" className="navbar-link text-white hover:text-secondary py-2 lg:py-0 lg:px-4">
             Contact
           </Link>
-
           {user &&
             <div className="flex items-center">
-
               {user?.photoURL &&
                 <LazyLoad placeholder={<div>Loading...</div>}>
+                  <div className="tooltip  tooltip-bottom" data-tip={user.displayName}>
                   <img src={user?.photoURL} alt="user profile" className="w-8 h-8 rounded-full mr-2" />
+                  </div>
                 </LazyLoad>
               }
-
-              <div className="relative">
-                <button className="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg" aria-label="User profile">
-                  {user.displayName}
-                </button>
-                <span className="hidden group-hover:block absolute top-full left-1/2 transform -translate-x-1/2 mt-1 px-2 py-1 text-xs text-gray-600 bg-gray-200 rounded-lg whitespace-nowrap">
-                  {user.email}
-                </span>
-              </div>
+   
             </div>
           }
-
 
           {
             user ?
@@ -111,10 +102,6 @@ const Header = () => {
                 </Link>
               </>
           }
-
-
-
-
         </div>
       </div>
     </nav>
